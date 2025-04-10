@@ -47,7 +47,9 @@
     margin-bottom: 12px;
     text-align: center;
   }
-  
+  .frota-card__title br{
+    display: none;
+  }
   /* Lista de especificações (sem bullets por padrão) */
   .frota-card__list {
     list-style: none;
@@ -99,9 +101,52 @@
       flex-wrap: wrap;
       justify-content: center;
     }
+    .frota-card__image{
+      max-height: 200px;
+    }
     .frota-card{
       justify-content: start;
-      max-width: 400px;
+      max-width: 20%;
+    }
+    .frota-card__title{
+      font-size: 22px;
+    }
+    .frota-card__title br{
+      display:block;
+    }
+  }
+
+  @media screen and (min-width:1300px) {
+    .frota-card__image{
+      max-height: 300px;
+    }
+    .frota-card__icon{
+      width: 34px;
+      height: 34px;
+    }
+    .frota-card__list-item{
+      font-size: 16px;
+    }
+    .frota-card__title{
+      font-size: 26px;
+    }
+
+  }
+
+  @media screen and (min-width:1500px) {
+    
+    .frota-card__list-item{
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (min-width:1800px) {
+    
+    .frota-card__list-item{
+      font-size: 22px;
+    }
+    .frota-card__title{
+      font-size: 28px;
     }
   }
 
@@ -111,15 +156,7 @@
       flex-wrap: nowrap;
       justify-content: space-between; /* ou use space-around, conforme seu layout */
     }
-    .frota-card{
-    min-height: 100%;
-      flex: 0 0 calc((100% - 3 * 20px) / 4); /* consideramos 20px de espaço entre os cards */
-    margin: 20px 0; /
-    }
     .frota-card__title{
-      font-size: 24px;
-    }
-    .frota-card__list-item {
-      font-size: 17px;
+      font-size: 30px;
     }
   }

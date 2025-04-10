@@ -6,6 +6,7 @@
 @import url("./Frota.css");
 @import url("./Orcamento.css");
 @import url("./Footer.css");
+@import url("./Teste.css");
 
 
 
@@ -73,6 +74,9 @@ body{
   @media screen and (min-width:1300px){
     .h2{
       text-align: left;
+    }
+    .h2-frota,.h2-vantagens,.h2{
+      font-size: 35px;
     }
 
 

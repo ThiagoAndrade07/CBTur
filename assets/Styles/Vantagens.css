@@ -38,16 +38,17 @@
     flex-direction: column;
 }
 .container-box-vantagens img{
-    max-width: 150px;
+    max-width: 70px;
     margin-bottom: 10px;
 }
 
 .container-box-vantagens p{
     color: var(--var-cor-branca);
-    max-width: 240px;
+    max-width: 270px;
     margin-bottom: 25px;
     line-height: 1.7;
-    text-align: center;
+    text-align: justify;
+    font-size: 18px;
 }
 
 .btn-vantagens{
@@ -61,11 +62,23 @@
 }
 
 @media screen and (min-width: 720px) {
+
     .container-vantagens {
         display: flex;
         justify-content: center;
         align-content: center;
         flex-direction: row;
+    }
+    .container-box-vantagens{
+        margin: 0 20px;
+        justify-content: start;
+    }
+      
+    .container-box-box-vantagens{
+        max-height: 100px;
+        display: flex;
+        align-items: center;
+        height: 100%;
     }
 }
 
@@ -85,7 +98,7 @@
     .container-box-vantagens{
         display: flex;
         flex-direction: row;
-        margin: 10px;
+        margin: 10px 40px;
         width: 33%;
     }
     .container-box-vantagens img{
@@ -93,8 +106,8 @@
     }
     .container-box-vantagens p {
         text-align: justify;
-        max-width: 200px;
-        min-width: 200px;
+        max-width: 300px;
+        min-width: 280px;
         width: 100%;
     }
 
@@ -114,9 +127,7 @@
         width: 100%;
     }
     .container-box-vantagens p{
-        font-size: 17px;
-        min-width: 300px;
-        max-width: 300px;
+        font-size: 18px;
     }
     .btn-vantagens{
         font-size: 32px;

@@ -58,8 +58,32 @@
     .container-box-quem-somos-img{
         justify-content: right;
     }
+    .p-quem-somos{
+        font-size: 17px;
+        width: 90%;
+    }
 
 }
+@media screen and (min-width:1500px){
+    .container-quem-somos{
+        width: 50%;
+    }
+    .container-box-quem-somos-img{
+        justify-content: right;
+        width: 50%;
+    }
+    .quem-somos-img{
+        max-width:  700px;
+        margin-bottom: -80px;
+    }
+    
+    .p-quem-somos{
+        font-size: 18px;
+        width: 90%;
+        text-align: left;
+    }
+}
+
 @media screen and (min-width:1920px){
 
     .quem-somos{
@@ -73,7 +97,8 @@
         margin-bottom: -100px;
     }
     .p-quem-somos{
-        font-size: 17px;
+        font-size: 20px;
         line-height: 2.1;
+        width: 95%;
     }
 }

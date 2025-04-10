@@ -22,11 +22,12 @@
   
   /* Texto descritivo */
   .cta-orcamento__description {
-    font-size: 16px;
+    font-size: 18px;
     color: #686868;
     max-width: 500px;   
-    line-height: 1.4;
+    line-height: 1.7;
     margin-bottom: 20px;
+    text-align:center;
   }
   
   /* Botão de ação */
@@ -67,6 +68,8 @@
     .cta-orcamento__description{
       font-size: 16px;
       line-height: 1.8;
+      text-align: left;
+      width: 80%;
     }
     .cta-orcamento__button{
       width: fit-content;
