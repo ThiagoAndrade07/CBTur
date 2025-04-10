@@ -1,0 +1,125 @@
+.nossa-frota{
+    background-color: var(--var-cor-verde-escuro);
+    padding: 20px 38px;
+}
+
+.frota-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.frota-card {
+    width: 80%; 
+    max-width: 300px;         
+    padding: 16px;
+    background-color: var(--var-cor-branca);
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    display: flex; 
+    flex-direction: column;   
+    justify-content: center; 
+    align-items: center;
+    margin: 20px auto;
+  }
+  
+  /* Imagem definida como background */
+.frota-card__image {
+    width: 100%;
+    height: 300px; /* Altura fixa para padronização */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    margin-bottom: 12px;
+  }
+  
+  .frota-card__image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .frota-card__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--var-cor-verde-escuro);           
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  
+  /* Lista de especificações (sem bullets por padrão) */
+  .frota-card__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Itens da lista */
+  .frota-card__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #686868;
+    padding: 10px 0;
+  }
+  
+  .frota-card__icon {
+    display: inline-block;
+    width: 24px;    
+    height: 24px;   
+    margin-right: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .icon-lugares {
+    background-image: url('../Img/acento.png');
+  }
+  .icon-wifi {
+    background-image: url('../Img/wifi.png');
+  }
+  .icon-monitor {
+    background-image: url('../Img/minitor.png');
+  }
+  .icon-usb {
+    background-image: url('../Img/carregador-usb.png');
+  }
+  .icon-banheiro {
+    background-image: url('../Img/banhairo.png');
+  }
+  .icon-ac {
+    background-image: url('../Img/ar-gelado.png');
+  }
+  
+  @media screen and (min-width:1024px){
+    .frota-card-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .frota-card{
+      justify-content: start;
+      max-width: 400px;
+    }
+  }
+
+  @media screen and (min-width:1920px){
+    .frota-card-container {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between; /* ou use space-around, conforme seu layout */
+    }
+    .frota-card{
+    min-height: 100%;
+      flex: 0 0 calc((100% - 3 * 20px) / 4); /* consideramos 20px de espaço entre os cards */
+    margin: 20px 0; /
+    }
+    .frota-card__title{
+      font-size: 24px;
+    }
+    .frota-card__list-item {
+      font-size: 17px;
+    }
+  }

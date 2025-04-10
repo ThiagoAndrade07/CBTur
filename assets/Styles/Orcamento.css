@@ -1,0 +1,105 @@
+
+.cta-orcamento {
+    background-color: var(--var-cor-branca);
+    padding: 25px 38px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .cta-orcamento-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .cta-orcamento__title {
+    font-size: 24px;
+    color: var(--var-cor-verde-claro); 
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+  
+  /* Texto descritivo */
+  .cta-orcamento__description {
+    font-size: 16px;
+    color: #686868;
+    max-width: 500px;   
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão de ação */
+  .cta-orcamento__button {
+    display: inline-block;
+    background-color: var(--var-cor-verde-claro); 
+    color: var(--var-cor-branca);               
+    padding: 12px 24px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* Efeito hover no botão */
+  .cta-orcamento__button:hover {
+    background-color: var(--var-cor-verde-claro);
+  }
+  
+  @media screen and (min-width:1024px){
+    .cta-orcamento{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 140px;
+    }
+    .cta-orcamento__title{
+      font-size: 28px;
+    }
+    .cta-orcamento-container{
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      text-align: left;
+      flex-direction: column;
+    }
+    .cta-orcamento__description{
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .cta-orcamento__button{
+      width: fit-content;
+      height: fit-content;
+      padding: 13px 50px;
+      font-size: 16px;
+      border-radius: 15px;
+      text-wrap: nowrap;
+    }
+  }
+
+  @media screen and (min-width:1500px){
+    .cta-orcamento{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 140px;
+    }
+    .cta-orcamento__title{
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .cta-orcamento__description{
+      font-size: 22px;
+      max-width: 800px;
+    }
+    .cta-orcamento__button{
+      width: fit-content;
+      height: fit-content;
+      padding: 17px 50px;
+      font-size: 27px;
+      border-radius: 15px;
+      text-wrap: nowrap;
+      margin-left: 200px;
+    }
+  }

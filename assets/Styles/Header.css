@@ -1,0 +1,148 @@
+/* ===== HEADER ===== */
+header {
+  background-color: #004738; /* Cor de fundo do header */
+  color: #fff;
+}
+
+/* Container do conteúdo do header */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px; /* Altura do header */
+}
+
+/* ============= LOGO ============= */
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  /* Caso seja necessário ajustar o tamanho do SVG */
+  width: auto;
+  height: 50px;
+}
+
+/* ============= MENU ============= */
+
+/* Ícone do menu hamburguer */
+.menu-icon {
+  display: none;  /* Será exibido apenas no mobile */
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Navegação padrão (desktop) */
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-left: 2rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #ccc;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* MOBILE - Telas menores que 1024px */
+@media (max-width: 1023px) {
+  /* Ajusta a área do logo se necessário */
+  .logo-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-container{
+    justify-content: center;
+  }
+
+  /* Exibe o ícone do menu */
+  .menu-icon {
+    display: flex;
+  }
+
+  /* Configura o nav para o menu mobile */
+  nav {
+    position: absolute;
+    top: 70px; /* mesma altura do header */
+    right: 0;
+    background-color: #004738;
+    flex-direction: column;
+    width: 200px;
+    display: none; /* inicia escondido */
+    padding: 1rem 0;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  /* Exibe o menu ao clicar */
+  nav.active {
+    display: flex;
+  }
+}
+
+/* DESKTOP - Telas a partir de 1024px */
+@media (min-width: 1024px) {
+  .menu-icon {
+    display: none;
+  }
+  
+  nav {
+    position: static;
+    display: flex;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  nav a{
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav li {
+    margin-left: 2rem;
+  }
+}

@@ -1,0 +1,126 @@
+.desktop-vantagens{
+    display: none;
+}
+.vantagens{
+    background-color: var(--var-cor-verde-claro);
+    padding: 0 38px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.h2-quem-somos{
+    color: var(--var-cor-branca);
+    font-weight: bold;
+    font-size: 18px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.container-main{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.container-box-vantagens{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-vantagens{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.container-box-vantagens img{
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.container-box-vantagens p{
+    color: var(--var-cor-branca);
+    max-width: 240px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.btn-vantagens{
+    margin: 0 auto 20px auto;
+    text-decoration: none;
+    color: var(--var-cor-verde-claro);
+    padding: 10px 25px;
+    border-radius: 20px;
+    background-color: var(--var-cor-branca);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 720px) {
+    .container-vantagens {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .vantagens{
+        padding: 0 80px;
+    }
+    .mobile-vantagens{
+        display: none;
+    }
+
+    .desktop-vantagens{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-box-vantagens{
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        width: 33%;
+    }
+    .container-box-vantagens img{
+        margin-right: 20px;
+    }
+    .container-box-vantagens p {
+        text-align: justify;
+        max-width: 200px;
+        min-width: 200px;
+        width: 100%;
+    }
+
+    .btn-vantagens{
+        padding: 15px 35px;
+        font-size: 28px;
+    }
+
+}
+
+@media screen and (min-width: 1920px){
+
+    .vantagens{
+        padding: 0 140px;
+    }
+    .container-main{
+        width: 100%;
+    }
+    .container-box-vantagens p{
+        font-size: 17px;
+        min-width: 300px;
+        max-width: 300px;
+    }
+    .btn-vantagens{
+        font-size: 32px;
+        border-radius: 18px;
+    }
+}
+    
