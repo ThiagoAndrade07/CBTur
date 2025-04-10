@@ -47,7 +47,7 @@
     max-width: 270px;
     margin-bottom: 25px;
     line-height: 1.7;
-    text-align: justify;
+    text-align: center;
     font-size: 18px;
 }
 
@@ -105,9 +105,9 @@
         margin-right: 20px;
     }
     .container-box-vantagens p {
-        text-align: justify;
+        text-align: left;
         max-width: 300px;
-        min-width: 280px;
+        min-width: 230px;
         width: 100%;
     }
 
