@@ -5,6 +5,11 @@
 .container-line-footer{
     display: none;
 }
+a:focus {
+    outline: 2px solid #ccc; /* Ou outra cor que combine com o design */
+    outline-offset: 2px;
+  }
+  
 .footer {
     background-color: var(--var-cor-verde-escuro);
     padding: 20px 38px;
@@ -50,6 +55,7 @@
 .footer__social{
     margin-top: 17px;
 }
+
 
 .contato-title-footer{
     margin: 20px 0;

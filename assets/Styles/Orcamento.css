@@ -41,7 +41,6 @@
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  overflow: hidden; /* Esconde qualquer elemento que ultrapasse os limites do botão */
   transition: background-color 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 

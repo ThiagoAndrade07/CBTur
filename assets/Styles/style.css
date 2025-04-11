@@ -16,6 +16,12 @@ body{
     font-family: "KkNew Regular", Arial, sans-serif;
   }
 
+  a {
+    color: inherit;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+  }
 .h2{
     color: var(--var-cor-verde-escuro);
     font-weight: bold;
