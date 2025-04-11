@@ -51,15 +51,57 @@
     font-size: 18px;
 }
 
-.btn-vantagens{
-    margin: 0 auto 20px auto;
-    text-decoration: none;
-    color: var(--var-cor-verde-claro);
-    padding: 10px 25px;
+/* Estilos base para o botão .btn-vantagens */
+.btn-vantagens {
+    position: relative; /* Permite o posicionamento absoluto dos pseudo-elementos */
+    display: inline-block;
+    background-color: var(--btn-background-color, var(--var-cor-branca)); /* Cor padrão – ajuste conforme necessário */
+    color: var(--btn-text-color, var(--var-cor-verde-claro));             
+    padding: 12px 24px;
     border-radius: 20px;
-    background-color: var(--var-cor-branca);
-    font-weight: bold;
-}
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    overflow: hidden; /* Esconde partes do pseudo-elemento que ultrapassam os limites */
+    transition: background-color 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto 30px auto;
+    width: fit-content;
+  }
+  
+  /* Garante que o texto fique acima do ícone */
+  .btn-vantagens span {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Efeito hover para o botão */
+  .btn-vantagens:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Pseudo-elemento ::before para o ícone */
+  .btn-vantagens::before {
+    content: "";
+    position: absolute;
+    top: 50%;             /* Centraliza verticalmente o ícone */
+    left: -40px;          /* Inicia fora do botão, à esquerda */
+    width: 40px;          /* Defina o tamanho conforme sua necessidade */
+    height: 40px;
+    background: url('../Img/icn-buton-1.png') no-repeat center; /* Substitua 'icone-cone.png' pelo caminho do seu ícone */
+    background-size: contain;
+    transform: translateY(-50%);
+    opacity: 0;
+    z-index: 1;           /* Fica abaixo do texto, mas acima do fundo do botão */
+    transition: left 1s ease, opacity 0.6s ease;
+  }
+  
+  /* Durante o hover, o ícone desliza para a direita, passando por baixo do texto */
+  .btn-vantagens:hover::before {
+    left: calc(100% + 20px); /* Move o ícone para fora do botão, pelo lado direito */
+    opacity: 1;
+  }
+  
 
 @media screen and (min-width: 720px) {
 

@@ -30,23 +30,56 @@
     text-align:center;
   }
   
-  /* Botão de ação */
-  .cta-orcamento__button {
-    display: inline-block;
-    background-color: var(--var-cor-verde-claro); 
-    color: var(--var-cor-branca);               
-    padding: 12px 24px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    transition: background-color 0.2s ease;
-  }
-  
-  /* Efeito hover no botão */
-  .cta-orcamento__button:hover {
-    background-color: var(--var-cor-verde-claro);
-  }
+ /* Botão de ação */
+.cta-orcamento__button {
+  position: relative; /* Permite o posicionamento absoluto do pseudo-elemento */
+  display: inline-block;
+  background-color: var(--var-cor-verde-claro); 
+  color: var(--var-cor-branca);               
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden; /* Esconde qualquer elemento que ultrapasse os limites do botão */
+  transition: background-color 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Garante que o texto (dentro do span) fique acima do pseudo-elemento */
+.cta-orcamento__button span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Efeito hover no botão */
+.cta-orcamento__button:hover {
+  background-color: var(--var-cor-verde-claro-darker, var(--var-cor-verde-claro)); 
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Pseudo-elemento para o ícone do cone */
+.cta-orcamento__button::before {
+  content: "";
+  position: absolute;
+  top: 50%;               /* Centraliza verticalmente */
+  left: -40px;            /* Inicia fora do botão, à esquerda */
+  width: 40px; 
+  height: 40px;
+  background: url('../Img/icn-buton.png') no-repeat center; /* Altere 'icone-cone.png' para o caminho do seu ícone */
+  background-size: contain;
+  transform: translateY(-50%);
+  opacity: 0;
+  z-index: 1;             /* Fica abaixo do texto, mas acima do fundo do botão */
+  transition: left 1s ease, opacity 0.6s ease;
+}
+
+/* Durante o hover, o ícone desliza da esquerda para a direita, passando por baixo do texto */
+.cta-orcamento__button:hover::before {
+  left: calc(100% + 20px); /* Move o ícone para fora do botão pelo lado direito */
+  opacity: 1;
+}
+
   
   @media screen and (min-width:1024px){
     .cta-orcamento{
