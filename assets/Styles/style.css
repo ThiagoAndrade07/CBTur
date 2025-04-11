@@ -8,7 +8,9 @@
 @import url("./Footer.css");
 @import url("./Teste.css");
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 body{
     font-family: "KkNew Regular", Arial, sans-serif;
